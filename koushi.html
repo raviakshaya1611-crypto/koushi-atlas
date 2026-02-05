@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Koushika’s Celestial Fantasy Atlas ✨</title>
+
+<style>
+:root{
+  --bg:#0b0c1a;
+  --panel:#15162b;
+  --accent:#c7b6ff;
+  --text:#ecebff;
+  --forest:#1f5c3a;
+  --desert:#7a5a2b;
+  --ocean:#1b3f6b;
+  --void:#120018;
+}
+
+body{
+  margin:0;
+  font-family:system-ui,sans-serif;
+  background:radial-gradient(circle at top,#1a1c4a,var(--bg));
+  color:var(--text);
+}
+
+header{text-align:center;padding:2rem}
+header h1{color:var(--accent)}
+
+main{
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:1rem;
+  padding:1rem;
+}
+
+.panel{
+  background:var(--panel);
+  border-radius:14px;
+  padding:1rem;
+  box-shadow:0 0 20px rgba(199,182,255,.15);
+  overflow:auto;
+  max-height:85vh;
+}
+
+details summary{
+  cursor:pointer;
+  color:var(--accent);
+  font-weight:600;
+  margin:.4rem 0;
+}
+
+ul{padding-left:1.2rem}
+li{margin:.25rem 0}
+
+.controls button,select{
+  background:var(--accent);
+  border:none;
+  border-radius:8px;
+  padding:.35rem .6rem;
+  margin:.15rem;
+  cursor:pointer;
+}
+
+svg{
+  width:100%;
+  height:420px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#10123b,#050611);
+}
+
+.location{
+  fill:white;
+  stroke:var(--accent);
+  stroke-width:2;
+  cursor:grab;
+}
+
+.location-label{
+  fill:white;
+  font-size:12px;
+  pointer-events:none;
+}
+
+textarea{
+  width:100%;
+  height:90px;
+  background:#0c0d22;
+  color:white;
+  border:1px solid #444;
+  border-radius:8px;
+  padding:.5rem;
+}
+
+footer{text-align:center;padding:1.5rem;color:#aaa}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🌙 Koushika’s Celestial Fantasy Atlas ✨</h1>
+<p>Names, garments, worlds — and the maps that remember them.</p>
+</header>
+
+<main>
+
+<!-- LEFT PANEL -->
+<div class="panel">
+
+<details open>
+<summary>📜 Fantasy Names (10 per letter)</summary>
+<ul>
+<li><b>A</b>: Aelthar, Aeryndel, Akarion, Althrys, Ambrial, Ancaris, Araelis, Astrael, Avarion, Aurendil</li>
+<li><b>B</b>: Baelric, Balefyre, Belladryn, Belthas, Blaedor, Brimwold, Bryneth, Blackthorn, Borvane, Bloodmere</li>
+<li><b>C</b>: Caelith, Caldris, Caranth, Celestryn, Ceraphis, Cindrael, Corveth, Crysalyn, Crestfall, Coldreach</li>
+<li><b>D</b>: Daerion, Dalthrys, Darkmere, Delphryn, Duskwyn, Dreadhollow, Dawnspire, Deathmere, Dravenel, Dragonreach</li>
+<li><b>E</b>: Elarion, Eldryss, Elowen, Emberfall, Eryndel, Evermere, Ebonreach, Eldervale, Evershade, Ezkarion</li>
+<li><b>F</b>: Faelwyn, Farynox, Fellmere, Fyranth, Frostfall, Fenrath, Flamehold, Fairhaven, Firewatch, Fallowdeep</li>
+<li><b>G</b>: Gaelric, Galethryn, Gloomreach, Gryndor, Goldmere, Gravenfall, Greywyn, Grimhold, Galecrest, Gloomspire</li>
+<li><b>H</b>: Haelion, Hallowmere, Hearthwyn, Helioris, Highfall, Hollowdeep, Hawkwind, Hellreach, Harrowdeep, Hyraxis</li>
+<li><b>I</b>: Icarion, Illyndra, Ironfall, Irethas, Ivoryreach, Immervale, Icewatch, Irondel, Inkmere, Icespire</li>
+<li><b>J</b>: Jaelric, Jandorin, Jorveth, Jadefall, Jethrys, Javelorn, Jinxmere, Jetspire, Jorwyn, Joyndel</li>
+<li><b>K</b>: Kaelthar, Keryxis, Kaldryn, Kingsfall, Kryndor, Knightrune, Kaldmere, Korenth, Kharion, Krysalis</li>
+<li><b>L</b>: Laerion, Lythara, Lorneth, Lunafall, Lightmere, Larkspire, Lumivale, Lirandel, Lornspire, Luneth</li>
+<li><b>M</b>: Maelthar, Myrenth, Moonfall, Mordryn, Mistvale, Miredeep, Mortmere, Mournspire, Moonwatch, Mistspire</li>
+<li><b>N</b>: Naerion, Nightmere, Netherdeep, Northfall, Nyxara, Nevermere, Noctwyn, Nightwatch, Netherfall, Noxaryn</li>
+<li><b>O</b>: Oathmere, Orveth, Olyndra, Obsidel, Omenfall, Overdeep, Oldreach, Onyxspire, Owlmere, Outlandryn</li>
+<li><b>P</b>: Paelion, Pyrethrys, Palevale, Pavoris, Primefall, Plumehaven, Palespire, Prismfall, Pyraxis, Pendrune</li>
+<li><b>Q</b>: Qaelion, Quorenth, Quartzfall, Qyraxis, Quillmere, Quietdeep, Qindorin, Quiverfall, Qandrel, Qyrenth</li>
+<li><b>R</b>: Raelthar, Ravenfall, Rythorin, Runemere, Redspire, Riftdeep, Runecrest, Rustmere, Rainspire, Royalmere</li>
+<li><b>S</b>: Saelion, Shadowmere, Sylvaris, Stormfall, Skyreach, Seraphyn, Silvermere, Starfall, Skyrune, Sabledeep</li>
+<li><b>T</b>: Taelthar, Thornmere, Twilightfall, Truespire, Talonreach, Tempestwyn, Thunderfall, Tidewatch, Towerdeep, Trisaryn</li>
+<li><b>U</b>: Uaelion, Umbravale, Unhallowmere, Underspire, Umberfall, Ulvaris, Uthermere, Ulyndra, Umbrareach, Upfall</li>
+<li><b>V</b>: Vaelthar, Valewatch, Voidmere, Virefall, Velvetdeep, Vastspire, Veilfall, Voidwatch, Virecrest, Viridianmere</li>
+<li><b>W</b>: Waelion, Wildmere, Windfall, Watchspire, Wolfmere, Winterfall, Wispdeep, Westreach, Wyrdspire, Whitecrest</li>
+<li><b>X</b>: Xaelion, Xythorin, Xavoris, Xyraxis, Xenfall, Xavelorn, Xornspire, Xyrelyn, Xiraxis, Xyrevale</li>
+<li><b>Y</b>: Yaelion, Ythorin, Yavoris, Yondermere, Yewspire, Yorneth, Yarrowdeep, Yonderfall, Yralis, Yavaryn</li>
+<li><b>Z</b>: Zaelthar, Zephyrfall, Zythorin, Zyraxis, Zorneth, Zenithmere, Zirefall, Zorynth, Zerochasm, Zyxara</li>
+</ul>
+</details>
+
+<details>
+<summary>👗 Clothing & Accessories (FULL)</summary>
+<ul>
+<li><b>Everyday & Cultural</b>: Tunic of Hearththread, River-linen wrap, Sunspun kirtle, Wayfarer’s jerkin, Moss-dyed trousers, Hearthcloak, Wind-scarf, Nomad sash, Borderland vest, Fisher’s salt-coat, Weaver’s overshirt, Hillfolk mantle, Dustcloak, Hearth-wool shawl, Traveler’s doublet, Marketday overdress, Sailcloth breeches, Lowland smock, Shepherd’s wrap, Pilgrim’s coat</li>
+
+<li><b>Noble & Royal</b>: Star-embroidered surcoat, Gilded mantle, Moonlace gown, Lion-thread tabard, Crowned doublet, Velvet dusk-coat, Pearl-fastened bodice, Sun-silk cape, Courtier’s sash, Ancestral mantle, Bloodline cloak, Royal riding coat, Silverfiligree jerkin, Throneward robe, Coronation stole, Crest-bearing cloak, Noble’s signet sash, Silkfall overdress, Heirloom mantle, Regalia cloak</li>
+
+<li><b>Mage & Mystic</b>: Spellwoven robe, Rune-stitched sleeves, Aether-thread cloak, Starcaller hood, Archivist’s mantle, Sigil-lined sash, Incantor’s gloves, Leywalker boots, Constellation shawl, Ritual vestments, Astral cowl, Chronomancer coat, Scrollkeeper’s belt, Ember-lined robe, Void-seer mantle, Alchemist’s apron, Dreambinding veil, Glyphcloak, Scryer’s hood, Planar-thread tunic</li>
+
+<li><b>Rogue & Ranger</b>: Shadowcloak, Silentstep boots, Leaf-camouflage mantle, Pathfinder’s jerkin, Knifebandolier, Weatherproof cloak, Grappling sash, Trailwarden coat, Hood of concealment, Smoke-dyed scarf, Lockpick bracer, Ranger’s poncho, Cliffwalker boots, Thieves’ fingerless gloves, Quickdraw belt, Nightwind mantle, Hunter’s shoulder cape, Dagger sheath harness, Scout’s half-cloak, Stormrunner coat</li>
+
+<li><b>Armor & Hybrid</b>: Brigandine vest, Scale-lined coat, Leather war-mantle, Ringmail undershirt, Padded gambeson, Battle-jerkin, Reinforced cloak, Chain-thread sleeves, Warbinder sash, Guard-captain’s mantle, Duelist’s coat, Shieldbearer vest, Scoutmail tunic, Hardened leather mantle, Skirmisher’s overcoat</li>
+
+<li><b>Headwear</b>: Rune-etched circlet, Laurel crown, Veil of stars, Battle helm crest, Hood of whispers, Scholar’s cap, Feathered war-helm, Sun-disc crown, Nomad headwrap, Crown of thorns, Frost-wool hood, Shadowveil, Diadem of lineage, Horned circlet, Pilgrim’s hat</li>
+
+<li><b>Jewelry & Artifacts</b>: Soulbound ring, Amulet of warding, Starshard pendant, Ancestral torque, Moonstone earrings, Blood-signet ring, Oath-chain necklace, Charm bracelet, Relic brooch, Sunmedallion, Whisper-locket, Bone-thread necklace, Rune-band ring, Crest pin, Spirit anklet, Seal of office</li>
+
+<li><b>Accessories</b>: Spellbelt, Coin-sash, Rune-pouch, Fingerless mage gloves, Gauntlets of grip, Scroll tube harness, Utility belt, Alchemist vial band, Traveler’s pouch, Healer’s satchel, Lockbox belt, Mapcase sling, Keyring chain, Charm-string, Component pouch</li>
+
+<li><b>Footwear</b>: Waystone boots, Silentstep shoes, Iron-sole greaves, Cliffwalker sandals, Frost-lined boots, Court slippers, War-rider boots, River-crossing shoes, Mage’s softsole boots, Nomad wraps, Shadowleather boots, Pilgrim sandals</li>
+
+<li><b>Cloaks</b>: Dawncloak, Nightfall mantle, Stormwoven cape, Hearthguard cloak, Ravenfeather cloak, Frostveil mantle, Sunward cape, Blood-red warcloak, Mistcloak, Starfall mantle, Shadow-thread cloak, Ashen cape, Moonshadow cloak</li>
+</ul>
+</details>
+
+<details>
+<summary>🌍 Worlds & Realms (FULL)</summary>
+<ul>
+<li><b>High Fantasy</b>: Aetherion, Eldoria, Valystrum, Aerindell, Thalmyr, Calythera, Luminara, Arkaelis, Mytherra, Solandria, Virelion, Auralis, Eryndor, Halcyra, Astryvale</li>
+<li><b>Dark</b>: Noctyrr, Umbrael, Dreadreach, Morveth, Ashkara, Netherfall, Gloamwyrd, Vanthell, Blackreach, Duskmere, Threnodya, Hollowfyr, Bloodryn, Nightspire, Cinderveil</li>
+<li><b>Mythic</b>: Primordia, Aeonfall, Titanreach, Firstwake, Ancestra, Everforge, Worldroot, Oldsong, Cradle of Ash, Stonewake, Dawnforge, Godscar, Eternal March, Skyfather’s Vale, Ash of Creation</li>
+<li><b>Celestial</b>: Stellara, Empyros, Aurelion Prime, Starfall Expanse, Celesthyr, Astryx, Heavenreach, Firmamenta, Lightrune, Solarae, Radiantis, Halochasm, Starbound Crown, Etherlight, Seraphel</li>
+<li><b>Elemental</b>: Pyrrhya, Glaciara, Verdantia, Tempestris, Terravault, Abyssara, Ashwind, Stonewake, Frostmere, Emberdeep, Tidefall, Skyshard, Rootbound, Magmora, Cloudreach</li>
+<li><b>Fae</b>: Faelune, Lethyra, Moonwillow, Sylvaeris, Dreaming Vale, Gossamer, Everglade, Petalreach, Starmeadow, Lullwyn, Briarhaven, Thistledream, Glowfen, Mistbloom, Dawnpetal</li>
+<li><b>Weird</b>: Nullspace, Echofall, The Shattered Spiral, Prismwake, The Veiled Nowhere, Mirrorreach, Fractyra, The In-Between, Timegrave, Parallax, Hollow Axis, The Long Silence, Spiral Deep, Dreamscar, The Last Horizon</li>
+<li><b>Power Names</b>: Axiom, Echelon, Mythos, Dominion, Paragon, Ascension, Continuum, Nexus, Genesis, Oblivion</li>
+</ul>
+</details>
+
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="panel">
+
+<div class="controls">
+<button onclick="addLocation()">➕ Add Location</button>
+<select onchange="setTerrain(this.value)">
+<option value="">🌍 Terrain</option>
+<option value="forest">🌲 Forest</option>
+<option value="desert">🏜 Desert</option>
+<option value="ocean">🌊 Ocean</option>
+<option value="void">🕳 Void</option>
+</select>
+<button onclick="saveMap()">💾 Save</button>
+<button onclick="loadMap()">📂 Load</button>
+<button onclick="clearMap()">🗑 Clear</button>
+</div>
+
+<svg id="map">
+<rect id="terrain" width="100%" height="100%" fill="#0b0c1a"/>
+</svg>
+
+<h3>📖 Location Lore</h3>
+<textarea id="lore" placeholder="Select a location to write its story…"></textarea>
+
+</div>
+</main>
+
+<footer>
+✨ Made for Koushika — may your worlds always remember ✨
+</footer>
+
+<script>
+const svg=document.getElementById("map");
+const terrain=document.getElementById("terrain");
+const loreBox=document.getElementById("lore");
+let locations=[],selected=null;
+
+function setTerrain(t){
+const c={forest:"var(--forest)",desert:"var(--desert)",ocean:"var(--ocean)",void:"var(--void)"};
+terrain.setAttribute("fill",c[t]||"#0b0c1a");
+}
+
+function addLocation(){
+const name=prompt("Location name:");
+if(!name)return;
+const x=Math.random()*80+10,y=Math.random()*80+10;
+const c=document.createElementNS("http://www.w3.org/2000/svg","circle");
+c.setAttribute("cx",x+"%");c.setAttribute("cy",y+"%");
+c.setAttribute("r",6);c.classList.add("location");
+
+const l=document.createElementNS("http://www.w3.org/2000/svg","text");
+l.setAttribute("x",x+"%");l.setAttribute("y",(y+4)+"%");
+l.textContent=name;l.classList.add("location-label");
+
+const o={circle:c,label:l,lore:""};
+c.onmousedown=e=>drag(e,o);
+c.onclick=()=>select(o);
+svg.append(c,l);locations.push(o);
+}
+
+function drag(e,o){
+document.onmousemove=ev=>{
+const r=svg.getBoundingClientRect();
+const x=(ev.clientX-r.left)/r.width*100;
+const y=(ev.clientY-r.top)/r.height*100;
+o.circle.setAttribute("cx",x+"%");
+o.circle.setAttribute("cy",y+"%");
+o.label.setAttribute("x",x+"%");
+o.label.setAttribute("y",(y+4)+"%");
+};
+document.onmouseup=()=>document.onmousemove=null;
+}
+
+function select(o){selected=o;loreBox.value=o.lore;}
+loreBox.oninput=()=>{if(selected)selected.lore=loreBox.value;}
+
+function saveMap(){
+localStorage.setItem("koushikaMap",JSON.stringify(locations.map(o=>({
+cx:o.circle.getAttribute("cx"),
+cy:o.circle.getAttribute("cy"),
+name:o.label.textContent,
+lore:o.lore
+}))));
+alert("Map saved ✨");
+}
+
+function loadMap(){
+clearMap();
+(JSON.parse(localStorage.getItem("koushikaMap")||"[]")).forEach(d=>{
+const c=document.createElementNS("http://www.w3.org/2000/svg","circle");
+c.setAttribute("cx",d.cx);c.setAttribute("cy",d.cy);
+c.setAttribute("r",6);c.classList.add("location");
+const l=document.createElementNS("http://www.w3.org/2000/svg","text");
+l.setAttribute("x",d.cx);
+l.setAttribute("y",(parseFloat(d.cy)+4)+"%");
+l.textContent=d.name;l.classList.add("location-label");
+const o={circle:c,label:l,lore:d.lore};
+c.onmousedown=e=>drag(e,o);
+c.onclick=()=>select(o);
+svg.append(c,l);locations.push(o);
+});
+}
+
+function clearMap(){
+locations=[];loreBox.value="";
+svg.querySelectorAll(".location,.location-label").forEach(e=>e.remove());
+}
+</script>
+
+</body>
+</html>
+
